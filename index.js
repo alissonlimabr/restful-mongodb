@@ -34,7 +34,6 @@ const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD)
 
 // Entregar uma porta
 mongoose
-    // usa o .connect do mongoose passando a string de conexão fornecida pelo atlas. 00123456789 é o password definido
     // bancodaapi é o bd da aplicação, caso não exista, ele cria
     .connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@apicluster.zxd2rn6.mongodb.net/bancodaapi?retryWrites=true&w=majority`)
     // Se a conexão for bem sucessida, ele executa na porta 3000
